@@ -3,20 +3,56 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"  crossorigin="anonymous">
 		<title>Bootstrap</title>
 	</head>
 	<body>
 		<h1>Bootstrap JavaScript</h1>
 
 		<h2>Galerie</h2>
-		<img src="podklady/1.jpg" alt="" width="696" />
-		<img src="podklady/2.jpg" alt="" width="696" />
-		<img src="podklady/3.jpg" alt="" width="696" />
+		<div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="podklady/1.jpg" class="d-block w-100" alt="..." width="696">
+    </div>
+    <div class="carousel-item">
+      <img src="podklady/2.jpg" class="d-block w-100" alt="..." width="696">
+    </div>
+    <div class="carousel-item">
+      <img src="podklady/3.jpg" class="d-block w-100" alt="..." width="696">
+    </div>
+	<div class="carousel-item">
+		<img src="podklady/4.jpg" class="d-block w-100" alt="..." width="696">
+	</div>
+	<div class="carousel-item">
+		<img src="podklady/5.jpg" class="d-block w-100" alt="..." width="696">
+	  </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+		<!-- <img src="" alt="" width="696" />
+		<img src="" alt="" width="696" />
+		<img src="" alt="" width="696" />
 		<img src="podklady/4.jpg" alt="" width="696" />
-		<img src="podklady/5.jpg" alt="" width="696" />
+		<img src="podklady/5.jpg" alt="" width="696" /> -->
 
 		<h2>Recept</h2>
-		<button>Ingredience</button>
+		<div class="accordion" id="accordionExample">
+			<div class="accordion-item">
+			  <h2 class="accordion-header">
+				<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+				  Ingredience
+				</button>
+			  </h2>
+			  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+				<div class="accordion-body">
 		<ul>
 			<li>500 g čerstvé rebarbory</li>
 			<li>1 šálek cukru</li>
@@ -28,87 +64,158 @@
 			<li>1 lžička vanilkového extraktu</li>
 			<li>1 lžička prášku do pečiva</li>
 			<li>2 vejce</li>
-		</ul>
-		<button>Příprava náplně a těsta</button>
-		<ul>
-			<li>Očistěte rebarboru a nakrájejte ji na kousky.</li>
-			<li>Vložte ji do hrnce a přidejte 1/2 šálku cukru a lžičku skořice.</li>
-			<li>
-				Vařte na mírném plameni asi 5 minut, nebo dokud rebarbora nezměkne a
-				uvolní šťávu. Poté odstavte a nechte vychladnout.
-			</li>
-			<li>Předehřejte troubu na 180 °C a vymažte formu na pečení máslem.</li>
-			<li>
-				Ve velké míse smíchejte mouku, ovesné vločky, zbývající cukr, prášek do
-				pečiva a špetku soli.
-			</li>
-			<li>
-				Přidejte na kostičky nakrájené máslo a promíchejte, dokud nevznikne
-				drobivá směs.
-			</li>
-			<li>
-				Do směsi přidejte vejce a vanilkový extrakt a míchejte, dokud
-				nedostanete hladké těsto.
-			</li>
-		</ul>
-		<button>Sestavení a pečení koláče</button>
-		<ul>
-			<li>Vložte polovinu těsta na dno formy a rovnoměrně ho rozetřete.</li>
-			<li>Na těsto nanesete vrstvu připravené rebarborové náplně.</li>
-			<li>
-				Na vrch rebarborové náplně nanesete zbylé těsto a opět ho rovnoměrně
-				rozetřete.
-			</li>
-			<li>
-				Pečte v předehřáté troubě asi 40-45 minut, dokud těsto nezezlátne a
-				nezačne se opouštět od okrajů formy.
-			</li>
-			<li>Po upečení nechte koláč vychladnout asi 15 minut před krájením.</li>
-			<li>
-				Podávejte teplý nebo studený, samostatně nebo s kopečkem vanilkové
-				zmrzliny.
-			</li>
-		</ul>
+		</ul> 
+				</div>
+			  </div>
+			</div>
 
-		<h2>Licenční podmínky</h2>
-		<button>Zobraz podmínky</button>
-		<ul>
-			<li>
-				Povolení k použití: Tento recept na rebarborový koláč je poskytován pro
-				osobní nekomerční použití. Každý má právo použít tento recept k přípravě
-				koláče pro sebe, svou rodinu nebo přátele bez ohledu na účel.
-			</li>
-			<li>
-				Nekomerční použití: Tento recept nesmí být použit pro komerční účely bez
-				výslovného písemného souhlasu majitele autorských práv. Komerční použití
-				zahrnuje, ale není omezeno na, prodej hotového koláče, využití receptu
-				ve restauracích, kavárnách, pekárnách nebo jiných stravovacích provozech
-				za účelem zisku.
-			</li>
-			<li>
-				Modifikace: Každý uživatel má právo provádět modifikace receptu podle
-				svých preferencí. Nicméně, modifikovaný recept by měl být označen jako
-				odvozený od původního receptu.
-			</li>
-			<li>
-				Autorská práva: Autorská práva k tomuto receptu patří jeho tvůrci. Pokud
-				je tento recept sdílen online, je vyžadováno uvést zdroj a případně
-				odkaz na původní recept.
-			</li>
-			<li>
-				Zodpovědnost: Tvůrce receptu nenese žádnou zodpovědnost za škody, které
-				mohou vzniknout v souvislosti s použitím tohoto receptu. Uživatelé
-				používají tento recept na vlastní nebezpečí.
-			</li>
-			<li>
-				Ochrana soukromí: Jakýkoli osobní údaj poskytnutý v souvislosti s
-				používáním tohoto receptu bude chráněn v souladu s platnými zákony a
-				politikami ochrany soukromí.
-			</li>
-		</ul>
-		<p>
-			Tyto podmínky jsou určeny k ochraně práv a zároveň k podpoře sdílení a
-			užívání receptu s respektováním práv autorů.
-		</p>
+				<div class="accordion-item">
+				  <h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+						Příprava náplně a těsta
+					</button>
+				  </h2>
+				  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+					<div class="accordion-body">
+			<ul>
+				<li>Očistěte rebarboru a nakrájejte ji na kousky.</li>
+				<li>Vložte ji do hrnce a přidejte 1/2 šálku cukru a lžičku skořice.</li>
+				<li>
+					Vařte na mírném plameni asi 5 minut, nebo dokud rebarbora nezměkne a
+					uvolní šťávu. Poté odstavte a nechte vychladnout.
+				</li>
+				<li>Předehřejte troubu na 180 °C a vymažte formu na pečení máslem.</li>
+				<li>
+					Ve velké míse smíchejte mouku, ovesné vločky, zbývající cukr, prášek do
+					pečiva a špetku soli.
+				</li>
+				<li>
+					Přidejte na kostičky nakrájené máslo a promíchejte, dokud nevznikne
+					drobivá směs.
+				</li>
+				<li>
+					Do směsi přidejte vejce a vanilkový extrakt a míchejte, dokud
+					nedostanete hladké těsto.
+				</li>
+			</ul> 
+					</div>
+				  </div>
+				</div>
+
+				<div class="accordion-item">
+					<h2 class="accordion-header">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+						Sestavení a pečení koláče
+					  </button>
+					</h2>
+					<div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+					  <div class="accordion-body">
+			  <ul>
+				<li>Vložte polovinu těsta na dno formy a rovnoměrně ho rozetřete.</li>
+				<li>Na těsto nanesete vrstvu připravené rebarborové náplně.</li>
+				<li>
+					Na vrch rebarborové náplně nanesete zbylé těsto a opět ho rovnoměrně
+					rozetřete.
+				</li>
+				<li>
+					Pečte v předehřáté troubě asi 40-45 minut, dokud těsto nezezlátne a
+					nezačne se opouštět od okrajů formy.
+				</li>
+				<li>Po upečení nechte koláč vychladnout asi 15 minut před krájením.</li>
+				<li>
+					Podávejte teplý nebo studený, samostatně nebo s kopečkem vanilkové
+					zmrzliny.
+				</li>
+			  </ul> 
+					  </div>
+					</div>
+				  </div>
+				  <h2 class="my-3">Licenční podmínky</h2>
+				  <button
+					  type="button"
+					  class="btn btn-primary"
+					  data-bs-toggle="modal"
+					  data-bs-target="#exampleModal"
+				  >
+					  Zobraz podmínky
+				  </button>
+				  <div
+					  class="modal fade"
+					  id="exampleModal"
+					  tabindex="-1"
+					  aria-labelledby="exampleModalLabel"
+					  aria-hidden="true"
+				  >
+					  <div class="modal-dialog">
+						  <div class="modal-content">
+							  <div class="modal-header">
+								  <h1 class="modal-title fs-5" id="exampleModalLabel">
+									  Licenční podmínky rebarborového koláče
+								  </h1>
+								  <button
+									  type="button"
+									  class="btn-close"
+									  data-bs-dismiss="modal"
+									  aria-label="Zavřít"
+								  ></button>
+							  </div>
+							  <div class="modal-body">
+								  <ul>
+									  <li>
+										  Povolení k použití: Tento recept na rebarborový koláč je
+										  poskytován pro osobní nekomerční použití. Každý má právo
+										  použít tento recept k přípravě koláče pro sebe, svou rodinu
+										  nebo přátele bez ohledu na účel.
+									  </li>
+									  <li>
+										  Nekomerční použití: Tento recept nesmí být použit pro komerční
+										  účely bez výslovného písemného souhlasu majitele autorských
+										  práv. Komerční použití zahrnuje, ale není omezeno na, prodej
+										  hotového koláče, využití receptu ve restauracích, kavárnách,
+										  pekárnách nebo jiných stravovacích provozech za účelem zisku.
+									  </li>
+									  <li>
+										  Modifikace: Každý uživatel má právo provádět modifikace
+										  receptu podle svých preferencí. Nicméně, modifikovaný recept
+										  by měl být označen jako odvozený od původního receptu.
+									  </li>
+									  <li>
+										  Autorská práva: Autorská práva k tomuto receptu patří jeho
+										  tvůrci. Pokud je tento recept sdílen online, je vyžadováno
+										  uvést zdroj a případně odkaz na původní recept.
+									  </li>
+									  <li>
+										  Zodpovědnost: Tvůrce receptu nenese žádnou zodpovědnost za
+										  škody, které mohou vzniknout v souvislosti s použitím tohoto
+										  receptu. Uživatelé používají tento recept na vlastní
+										  nebezpečí.
+									  </li>
+									  <li>
+										  Ochrana soukromí: Jakýkoli osobní údaj poskytnutý v
+										  souvislosti s používáním tohoto receptu bude chráněn v souladu
+										  s platnými zákony a politikami ochrany soukromí.
+									  </li>
+								  </ul>
+								  <p>
+									  Tyto podmínky jsou určeny k ochraně práv a zároveň k podpoře
+									  sdílení a užívání receptu s respektováním práv autorů.
+								  </p>
+							  </div>
+							  <div class="modal-footer">
+								  <button
+									  type="button"
+									  class="btn btn-secondary"
+									  data-bs-dismiss="modal"
+								  >
+									  Zavřít
+								  </button>
+							  </div>
+						  </div>
+					  </div>
+				  </div>
+			  </div>
+
+				
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 	</body>
 </html>
